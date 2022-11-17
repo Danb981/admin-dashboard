@@ -1,0 +1,119 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(750px, 5fr);
+    grid-template-rows: minmax(200px, 250px) 4fr;
+}
+
+.container > div{
+    padding: 25px;
+    font-size: 1.5rem;
+}
+
+.sidebar{
+    background-color: rgb(84, 84, 236);
+    grid-area: 1 / 1 / 3 / 2;
+    display: grid;
+    align-content: flex-start;
+    grid-template-rows: repeat(11, minmax(50px, 75px));
+    align-items: center;
+    overflow: auto;
+
+    color: white;
+}
+
+.sidebar > span{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sidebar > span:hover:not(.title){
+    cursor: pointer;
+    color: darkblue;
+}
+
+span:nth-last-child(1){
+    grid-row-end: -1;
+}
+
+span:nth-last-child(2){
+    grid-row-end: -2;
+}
+
+span:nth-last-child(3){
+    grid-row-end: -3;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 50% 50%;
+    background-color: white;
+}
+
+.header > span{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.search{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.search > input{
+    flex: 1;
+    height: 40px;
+    border-radius: 16px;
+    border: none;
+    background-color: whitesmoke;
+}
+
+.profile{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.pfp{
+    height: 70px;
+}
+
+.greeting{
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.greeting > span > *{
+    line-height: 25%;
+}
+
+.actions{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.actions > button{
+    flex: 1;
+    height: 40px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    color: white;
+    background-color:rgb(84, 84, 236);
+    font-size: 16pt;
+}
+
+.actions > button:hover{
+    cursor: pointer;
+    background-color:whitesmoke;
+    color:rgb(84, 84, 236);
+    border: 1px solid rgb(84, 84, 236);
+}
+
+.content{
+    background-color: whitesmoke;
+}
