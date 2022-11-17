@@ -142,6 +142,8 @@ span:nth-last-child(3){
     border: 1px solid rgb(84, 84, 236);
     padding: 15px;
     border-radius: 16px;
+    display: flex;
+    flex-direction: column;
 }
 
 .articles{
@@ -188,7 +190,9 @@ span:nth-last-child(3){
 
 .projButtons{
     display: flex;
+    flex: 1;
     justify-content: end;
+    align-items: flex-end;
     gap: 15px;
 }
 
